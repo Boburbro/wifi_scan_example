@@ -72,6 +72,7 @@ class _WifiScanScreenState extends State<WifiScanScreen> {
           accessPoints.isEmpty
               ? const Center(child: Text('Wi-Fi tarmoqlari topilmadi'))
               : ListView.builder(
+                physics: BouncingScrollPhysics(),
                 padding: EdgeInsets.all(8),
                 itemCount: accessPoints.length,
                 itemBuilder: (context, index) {
